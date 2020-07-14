@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:layout_marginTop="0dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/Top"
+                android:layout_weight="1"
+                android:background="#808080">
+
+                <ImageView
+                    android:id="@+id/poster"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/ake"/>
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/back"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@mipmap/back"/>
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/write"
+                    android:background="@mipmap/write"
+                    android:layout_alignBaseline="@+id/back"
+                    android:layout_alignBottom="@+id/back"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="12dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="名字"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintRight_toLeftOf="@id/detail_name"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="70dp"
+                    android:id="@+id/detail_name"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:text="name"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="定位"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintRight_toLeftOf="@id/detail_type"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="270dp"
+                    android:id="@+id/detail_type"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:text="type"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="称号"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintRight_toLeftOf="@id/detail_title"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="70dp"
+                    android:id="@+id/detail_title"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:text="title"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="性别"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintRight_toLeftOf="@id/detail_sex"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="270dp"
+                    android:id="@+id/detail_sex"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:text="sex"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="生存能力"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintRight_toLeftOf="@id/detail_life"
+                    android:layout_marginRight="10dp"/>
+
+                <ProgressBar
+                    android:id="@+id/detail_life"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:progressDrawable="@drawable/progressbar"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginLeft="110dp"
+                    android:max="100"
+                    android:progress="30"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="攻击伤害"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintRight_toLeftOf="@id/detail_attack"
+                    android:layout_marginRight="10dp"/>
+
+                <ProgressBar
+                    android:id="@+id/detail_attack"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:progressDrawable="@drawable/progressbar1"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginLeft="110dp"
+                    android:max="100"
+                    android:progress="100"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="技能效果"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintRight_toLeftOf="@id/detail_skill"
+                    android:layout_marginRight="10dp"/>
+
+                <ProgressBar
+                    android:id="@+id/detail_skill"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:progressDrawable="@drawable/progressbar2"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginLeft="110dp"
+                    android:max="100"
+                    android:progress="40"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上手难度"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintRight_toLeftOf="@id/detail_difficulty"
+                    android:layout_marginRight="10dp"/>
+
+                <ProgressBar
+                    android:id="@+id/detail_difficulty"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:progressDrawable="@drawable/progressbar3"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginLeft="110dp"
+                    android:max="100"
+                    android:progress="60"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="5dp"
+                android:background="#1E000000" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/leftpart">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="英雄故事"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="20dp"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical">
+
+                <TextView
+                    android:background="#7cefefef"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/detail_achievement"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:text="story"/>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="145dp"
+        android:layout_height="145dp"
+        android:background="@drawable/circle"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp">
+
+        <com.experiment.group22.glory.RoundImageView
+            android:id="@+id/head_photo"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:background="@drawable/circle"
+            app:srcCompat="@mipmap/ake_icon"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
