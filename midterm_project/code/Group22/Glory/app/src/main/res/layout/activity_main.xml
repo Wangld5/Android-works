@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/main_layout"
+    android:foreground="@mipmap/background">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.lailx.midterm.MainActivity"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/search_icon"
+            android:src="@mipmap/search"
+            android:background="#888888"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/search_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="13"
+            android:textSize="20sp"
+            android:inputType="text"
+            android:hint="输入名字进行搜索"
+            android:imeOptions="actionSearch"
+
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/search_icon"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/search_text" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/music"
+            android:src="@mipmap/vol"
+            app:backgroundTint="#888888"
+            app:elevation="6dp"
+            app:rippleColor="#999999"
+            app:pressedTranslationZ="12dp"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="60dp"
+            android:layout_marginRight="10dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add"
+            android:src="@mipmap/add"
+            app:backgroundTint="#888888"
+            app:elevation="6dp"
+            app:rippleColor="#999999"
+            app:pressedTranslationZ="12dp"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="0dp"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+
+</FrameLayout>
