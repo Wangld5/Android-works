@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/chose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="200dp">
+        <RadioButton
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="login"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/registerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="register"
+            app:layout_constraintLeft_toRightOf="@id/loginButton" />
+
+    </RadioGroup>
+    <RelativeLayout
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/chose">
+        <EditText
+            android:id="@+id/loginUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username" />
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:layout_below="@id/loginUsername" />
+        <Button
+            android:id="@+id/loginOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:layout_below="@id/Password" />
+        <Button
+            android:id="@+id/loginclear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLEAR"
+            android:layout_toRightOf="@id/loginOK"
+            android:layout_below="@id/Password"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/chose">
+        <ImageView
+            android:id="@+id/imageButton"
+            android:layout_width="120sp"
+            android:layout_height="120sp"
+            android:src="@drawable/add"
+            android:layout_centerHorizontal="true"/>
+        <EditText
+            android:id="@+id/registerUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:layout_below="@id/imageButton"/>
+        <EditText
+            android:id="@+id/NewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="New Password"
+            android:inputType="textPassword"
+            android:layout_below="@id/registerUsername" />
+        <EditText
+            android:id="@+id/ComfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Comfirm Password"
+            android:inputType="textPassword"
+            android:layout_below="@id/NewPassword" />
+        <Button
+            android:id="@+id/registerOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:layout_below="@id/ComfirmPassword" />
+        <Button
+            android:id="@+id/registerclear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLEAR"
+            android:layout_below="@id/ComfirmPassword"
+            android:layout_toRightOf="@id/registerOK"/>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
